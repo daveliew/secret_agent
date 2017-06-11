@@ -4,16 +4,14 @@ body{
   color: white;
 }
 
-.container{
-  max-width: 960px;
-  margin: 0 auto;
+header{
+  display: flex;
+  background-color: black;
 }
 
-header{
-  background-color: black;
+header .container{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 header img{
@@ -22,11 +20,20 @@ header img{
   margin-right: 1rem;
 }
 
-
-
-header h2{
+header .logo{
+  display: flex;
   margin-top: 0.66rem;
   margin-bottom: 0.66rem;
+  align-items: center;
+}
+
+.logo h2{
+  font-size: 1rem;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .banner{
@@ -37,14 +44,22 @@ header h2{
   background-repeat: no-repeat;
 }
 
+.banner .container{
+  display: flex;
+  justify-content: flex-start;
+}
+
 .new-arrival{
-  display: block;
-  position: relative;
   font-weight: bold;
-  font-size: 2rem;
   background-color: black;
-  padding: 2em 3em;
-  top: 9em;
+  padding: 2rem 3rem;
+  margin-top: 9rem;
+  width: 20rem;
+}
+
+.new-arrival h1{
+  font-size: 2rem;
+  margin-top: 0.25rem;
 }
 
 nav{
@@ -59,6 +74,9 @@ nav ul{
   list-style: none;
 }
 
+.product-grid{
+  background-color: white;
+}
 footer{
   background-color: black;
   height: 5rem;
