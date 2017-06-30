@@ -7,12 +7,17 @@
 
 body {
   font-size: 18px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4em;
   color: white;
 }
 
-header {
-  display: flex;
+#black {
+  color: black;
+}
+
+/* company header */
+.company {
   background-color: black;
 }
 
@@ -22,31 +27,18 @@ header {
   padding: 12px 0px 12px 0.5em;
 }
 
-header img{
-  height: 1.5rem;
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-}
-
-header .logo{
-  display: flex;
-  margin-top: 0.66rem;
-  margin-bottom: 0.66rem;
-  align-items: center;
-}
-
-.logo h2{
-  font-size: 1rem;
-}
-
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
 
+.company img{
+  height: 1.5rem;
+  padding-right: 15px;
+}
 
-
-.banner{
+/* Hero Banner */
+.banner {
   background-image: url("../images/moto.jpeg");
   height: 25rem;
   background-position: center;
@@ -54,23 +46,22 @@ header .logo{
   background-repeat: no-repeat;
 }
 
-.banner .container{
-  display: flex;
-  justify-content: flex-start;
-}
-
-.new-arrival{
+.new-arrival {
   font-weight: bold;
   background-color: black;
   padding: 2rem 3rem;
-  margin-top: 9rem;
-  width: 20rem;
+  top: 9rem;
+  width: 500px;
+  position: relative;
 }
 
-.new-arrival h1{
-  font-size: 2rem;
-  margin-top: 0.25rem;
+.new-arrival h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-top: 2rem;
 }
+
+/* nav bar */
 
 nav{
   background-color: firebrick;
@@ -84,36 +75,37 @@ nav ul{
   list-style: none;
 }
 
-.products{
+/*product showcase */
+
+.products {
   display: flex;
   justify-content: space-between;
-  padding-top: 3rem;
-  flex-direction: row;
+  margin-top: 3rem;
 }
 
-.product{
+
+.product {
   width: 30%;
 }
 
-.product-image{
+.product-image {
   display: flex;
   border: 4px solid black;
   height: 9rem;
-  padding: 2rem;
+  padding: 2rem 0;
   justify-content: center;
   align-items: center;
 }
 
 .product-image img{
-  max-width: 8em;
+  max-width: 8rem;
 }
 
-.description{
-  display: flex;
-  justify-content: center;
+.description {
+  display: block;
+  text-align: center;
   background-color: black;
   padding: 0.5rem;
-  max-width: 100%;
 }
 
 /* business info */
@@ -121,19 +113,21 @@ nav ul{
 .business-info{
   display: flex;
   justify-content: space-between;
-  margin: 3rem 0 4rem 0;
+  margin-top: 3rem;
 }
 
 .info {
   width: 35%;
+  margin-bottom: 4rem;
 }
 
-.title{
+.info .title {
+  display: block;
   background-color: black;
   padding: 1rem 2rem;
 }
 
-.span {
+.info .span {
   color: black;
   margin-top: 1rem;
 }
@@ -150,10 +144,8 @@ footer{
 
 @media only screen and (max-width: 1024px) {
 
-
   .product {
-    display: inline-block;
-    overflow: auto;
+    width: 47%;
   }
 
   body {
@@ -166,7 +158,7 @@ footer{
   }
 
   .desktop,
-  .product.desktop {
+  .glasses {
     display: none;
   }
 }
@@ -190,20 +182,21 @@ footer{
     font-size: 1rem;
   }
 
-
-
-  .product-card {
-    display: flex;
-    justify-content: space-between;
+  .product {
     width: 90%;
-    margin-top: 3rem;
-
+    margin-left: 1rem;
   }
 
-  .container .info {
-    flex-direction: column;
-    width: 90%;
-    margin-bottom: 0.5rem;
+  .mobile-nav {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .desktop,
+  .watch,
+  .glasses {
+    display: none;
   }
 
 }
