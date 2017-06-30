@@ -1,17 +1,25 @@
-body{
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-size: 18px;
   font-family: Helvetica, Arial, sans-serif;
   color: white;
 }
 
-header{
+header {
   display: flex;
   background-color: black;
 }
 
-header .container{
+.company .container{
   display: flex;
-  width: 100%;
+  align-items: center;
+  padding: 12px 0px 12px 0.5em;
 }
 
 header img{
@@ -31,10 +39,12 @@ header .logo{
   font-size: 1rem;
 }
 
-.container{
+.container {
   max-width: 960px;
   margin: 0 auto;
 }
+
+
 
 .banner{
   background-image: url("../images/moto.jpeg");
@@ -81,7 +91,7 @@ nav ul{
   flex-direction: row;
 }
 
-.product-card{
+.product{
   width: 30%;
 }
 
@@ -98,7 +108,7 @@ nav ul{
   max-width: 8em;
 }
 
-.product-info{
+.description{
   display: flex;
   justify-content: center;
   background-color: black;
@@ -106,23 +116,24 @@ nav ul{
   max-width: 100%;
 }
 
-.info{
+/* business info */
+
+.business-info{
   display: flex;
   justify-content: space-between;
   margin: 3rem 0 4rem 0;
 }
 
-.location,
-.hours{
+.info {
   width: 35%;
 }
 
-.info h3{
+.title{
   background-color: black;
   padding: 1rem 2rem;
 }
 
-.info h4{
+.span {
   color: black;
   margin-top: 1rem;
 }
@@ -131,4 +142,68 @@ footer{
   background-color: black;
   padding: 5rem;
   text-align: left;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+  .product {
+    display: inline-block;
+    overflow: auto;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .desktop,
+  .product.desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .banner {
+    height: 15rem;
+  }
+
+  .new-arrival {
+    top: 10em;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .new-arrival h4 {
+    font-size: 0.77rem;
+  }
+
+  .new-arrival h1 {
+    font-size: 1rem;
+  }
+
+
+
+  .product-card {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 3rem;
+
+  }
+
+  .container .info {
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
 }
